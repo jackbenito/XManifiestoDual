@@ -70,6 +70,36 @@
             margin-top: 1.5rem;
             border-top: 1px solid #e5e7eb;
         }
+
+        /* Estilo para la sección de FAQ */
+        .faq-item {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+            padding: 0 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Ajustar según contenido máximo esperado */
+            padding: 0.75rem 1rem 1rem;
+        }
+        
+        .faq-item.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+        
+        .arrow-icon {
+            transition: transform 0.3s;
+        }
     </style>
 </head>
 <body class="font-sans-body">
@@ -81,8 +111,9 @@
                 📂🌈X Manifiesto Dual
             </span>
             <div class="space-x-4">
-                <a href="index.html" class="text-white font-medium border-b-2 border-yellow-400 pb-1">Inicio (Manifiesto)</a>
-                <a href="comentarios.html" class="text-white font-medium hover:border-b-2 hover:border-yellow-400 pb-1 transition duration-150">Enviar Comentarios</a>
+                <!-- Se usa JS para generar rutas robustas en GitHub Pages -->
+                <a id="nav-inicio" href="#" class="text-white font-medium border-b-2 border-yellow-400 pb-1">Inicio (Manifiesto)</a>
+                <a id="nav-comentarios" href="#" class="text-white font-medium hover:border-b-2 hover:border-yellow-400 pb-1 transition duration-150">Enviar Comentarios</a>
             </div>
         </div>
     </nav>
@@ -102,7 +133,7 @@
         <!-- Contenedor Dual del Manifiesto -->
         <div class="flex flex-col lg:flex-row gap-8">
             
-            <!-- Bloque de BENITO NAUTA X (CORREGIDO) -->
+            <!-- Bloque de BENITO NAUTA X -->
             <section id="benito" class="flex-1 p-6 rounded-xl shadow-lg border-t-8" 
                      style="border-color: var(--benito-primary); background-color: #F8FFFF;">
                 <h2 class="font-serif-title text-2xl font-bold mb-4" style="color: var(--benito-primary);">
@@ -119,7 +150,7 @@
                     <p><strong>OBJETIVOS:</strong> Analizar tendencias económicas y políticas, aplicar marcos filosóficos (la brújula), y fomentar la **acción** basada en el dato y la humanidad.</p>
                 </div>
                 
-                <!-- Video Inspiracional de Benito (313 - CORREGIDO) -->
+                <!-- Video Inspiracional de Benito (313) -->
                 <h3 class="font-bold mt-6 mb-2 text-base" style="color: var(--benito-primary);">Video Inspiracional: 313</h3>
                 <div class="video-container">
                     <!-- YouTube embed para Residente, Silvia Pérez Cruz, Penélope Cruz - 313 -->
@@ -129,19 +160,20 @@
                     </iframe>
                 </div>
 
-                <!-- Cita APA de Benito (CORREGIDA) -->
+                <!-- Cita APA de Benito -->
                 <div class="cita-apa mt-4 rounded-md p-3" style="border-color: var(--benito-accent); background-color: #e6f7ff; color: var(--benito-primary);">
                     <p class="font-bold">Cita APA (7ma Edición):</p>
                     <p class="italic">Residente. [Residente]. (2024, 21 de marzo). Residente, Silvia Pérez Cruz, Penélope Cruz - 313 (Official Video) [Video]. YouTube.</p>
                 </div>
 
-                <a href="comentarios.html" class="mt-6 inline-block text-sm font-semibold rounded-md py-2 px-4 shadow-md transition duration-150 ease-in-out" 
+                <!-- Botón de Comentarios, ahora con ID para JS -->
+                <a id="btn-benito-comment" href="#" class="mt-6 inline-block text-sm font-semibold rounded-md py-2 px-4 shadow-md transition duration-150 ease-in-out" 
                    style="background-color: var(--benito-primary); color: white; hover-bg: #004d99;">
                     Enviar Comentario
                 </a>
             </section>
 
-            <!-- Bloque de JACK TAMARINDO X (SIN CAMBIOS) -->
+            <!-- Bloque de JACK TAMARINDO X (ACTUALIZADO) -->
             <section id="jack" class="flex-1 p-6 rounded-xl shadow-lg border-t-8" 
                      style="border-color: var(--jack-primary); background-color: #FFF0F5;">
                 <h2 class="font-serif-title text-2xl font-bold mb-4" style="color: var(--jack-primary);">
@@ -158,29 +190,73 @@
                     <p><strong>OBJETIVOS:</strong> Desmontar noticias y *memes*, identificar falacias, y ofrecer una perspectiva que honre la complejidad de la realidad social y política.</p>
                 </div>
                 
-                <!-- Video Inspiracional de Jack -->
-                <h3 class="font-bold mt-6 mb-2 text-base" style="color: var(--jack-primary);">Video Inspiracional: Bajo los Escombros</h3>
+                <!-- Video Inspiracional de Jack (ACTUALIZADO) -->
+                <h3 class="font-bold mt-6 mb-2 text-base" style="color: var(--jack-primary);">Video Inspiracional: Schwer (Paul Kalkbrenner)</h3>
                 <div class="video-container">
-                    <!-- YouTube embed para Residente - Bajo los Escombros -->
+                    <!-- YouTube embed para Paul Kalkbrenner - Schwer (Official Video) -->
                     <iframe src="https://www.youtube.com/embed/Le5AGYxPCLI" 
                             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen title="Video Musical: Residente - Bajo los Escombros">
+                            allowfullscreen title="Video Musical: Paul Kalkbrenner - Schwer (Official Video)">
                     </iframe>
                 </div>
 
-                <!-- Cita APA de Jack -->
+                <!-- Cita APA de Jack (ACTUALIZADA) -->
                 <div class="cita-apa mt-4 rounded-md p-3" style="border-color: var(--jack-accent); background-color: #fce9e9; color: var(--jack-primary);">
                     <p class="font-bold">Cita APA (7ma Edición):</p>
-                    <p class="italic">Residente. [ResidenteVEVO]. (2024, 23 de febrero). Residente, Amal Murkus - Bajo los Escombros (Visualizer) [Video]. YouTube.</p>
+                    <p class="italic">Kalkbrenner, P. [PaulKalkbrenner]. (2014, 25 de septiembre). Paul Kalkbrenner - Schwer (Official Video) [Video]. YouTube.</p>
                 </div>
 
-                <a href="comentarios.html" class="mt-6 inline-block text-sm font-semibold rounded-md py-2 px-4 shadow-md transition duration-150 ease-in-out" 
+                <!-- Botón de Comentarios, ahora con ID para JS -->
+                <a id="btn-jack-comment" href="#" class="mt-6 inline-block text-sm font-semibold rounded-md py-2 px-4 shadow-md transition duration-150 ease-in-out" 
                    style="background-color: var(--jack-primary); color: white; hover-bg: #9b59b6;">
                     Enviar Comentario
                 </a>
             </section>
         </div>
+        
+        <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
+        <section id="faq" class="mt-16 pt-8 border-t-2 border-gray-200">
+            <h2 class="font-serif-title text-3xl font-bold text-center mb-8 text-gray-800">
+                Preguntas Frecuentes (FAQ)
+            </h2>
+            <div class="max-w-3xl mx-auto divide-y divide-gray-200">
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-4 px-4 hover:bg-gray-50 rounded-md">
+                        <span class="font-semibold text-gray-700">¿Qué es el "Manifiesto Dual X"?</span>
+                        <svg class="arrow-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer bg-gray-50 text-sm text-gray-600">
+                        <p>Es un documento fundacional y un proyecto de pensamiento crítico creado por dos personajes digitales, @BenitoNautaX y @JackTamarindoX, para analizar el contexto socioeconómico, político y tecnológico desde una doble perspectiva.</p>
+                    </div>
+                </div>
 
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-4 px-4 hover:bg-gray-50 rounded-md">
+                        <span class="font-semibold text-gray-700">¿Quiénes son Benito Nauta y Jack Tamarindo?</span>
+                        <svg class="arrow-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer bg-gray-50 text-sm text-gray-600">
+                        <p>Son personajes conceptuales que representan dos enfoques de la crítica: Benito utiliza la Filosofía y los Datos Duros para navegar el caos, mientras que Jack usa la Crítica de Cine y la Electrónica para desmontar narrativas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question flex justify-between items-center py-4 px-4 hover:bg-gray-50 rounded-md">
+                        <span class="font-semibold text-gray-700">¿Por qué usan música Electrónica y Filosofía?</span>
+                        <svg class="arrow-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="faq-answer bg-gray-50 text-sm text-gray-600">
+                        <p>La Filosofía (Benito) proporciona el marco ético y racional para el análisis. La Electrónica (Jack) representa la "Resistencia en binario" y el pulso agridulce y contemporáneo de la crítica.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
         <!-- Pie de Página y Licencia CC -->
         <footer class="mt-10 pt-6 text-center border-t border-gray-300">
             <p class="license-footer">
@@ -191,5 +267,64 @@
             </p>
         </footer>
     </div>
+
+    <script>
+        // --- LÓGICA DE GITHUB PAGES (Rutas Robustas) ---
+        function getBasePath() {
+            const pathSegments = window.location.pathname.split('/');
+            // El nombre del repositorio es típicamente el segundo segmento en el path de GitHub Pages
+            const repoName = pathSegments.length > 1 && pathSegments[1] !== '' && pathSegments[1] !== 'index.html' ? pathSegments[1] : '';
+            return repoName ? `/${repoName}/` : '/';
+        }
+
+        // Función para establecer las URLs de navegación
+        function setNavigationUrls() {
+            const basePath = getBasePath();
+            const inicio = document.getElementById('nav-inicio');
+            const comentarios = document.getElementById('nav-comentarios');
+            const btnBenito = document.getElementById('btn-benito-comment');
+            const btnJack = document.getElementById('btn-jack-comment');
+
+            // URL del archivo de comentarios
+            const comentariosUrl = `${basePath}comentarios.html`;
+            
+            if (inicio) inicio.href = `${basePath}index.html`;
+            
+            // Todos los enlaces de comentarios apuntan al mismo archivo
+            if (comentarios) comentarios.href = comentariosUrl;
+            if (btnBenito) btnBenito.href = comentariosUrl;
+            if (btnJack) btnJack.href = comentariosUrl;
+        }
+
+        // --- LÓGICA DEL FAQ (ACORDEÓN) ---
+        function setupFaqAccordion() {
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.closest('.faq-item');
+                    const isActive = item.classList.contains('active');
+
+                    // Cerrar todos los demás ítems
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Abrir o cerrar el ítem actual
+                    if (isActive) {
+                        item.classList.remove('active');
+                    } else {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        }
+        
+        // Ejecutar funciones al cargar la ventana
+        window.onload = function() {
+            setNavigationUrls();
+            setupFaqAccordion();
+        };
+    </script>
 </body>
 </html>
