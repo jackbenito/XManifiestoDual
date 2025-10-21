@@ -1,18 +1,16 @@
 🧭🌶️ Manifiesto Dual X: Benito Nauta & Jack Tamarindo
 
-Proyecto y Filosofía
+¡Bienvenido al Archivo Vivo! 📂🌈X
 
-Este repositorio aloja el Manifiesto Dual X, que presenta la Filosofía, Misión, Visión, Valores y Objetivos de los personajes de pensamiento crítico @BenitoNautaX y @JackTamarindoX.
+Este repositorio contiene el Manifiesto Dual X, el documento fundacional de los personajes de pensamiento crítico @BenitoNautaX y @JackTamarindoX. Nuestro objetivo es fomentar un análisis profundo y dual sobre el caos político, social, económico y tecnológico que define a la Generación X.
 
-El objetivo es ofrecer una plataforma de análisis donde convergen dos perspectivas de la Generación X sobre el caos político, social, económico y tecnológico:
+@BenitoNautaX: Mapea el caos con la brújula de la Filosofía y la Resiliencia.
 
-Benito Nauta: Mapea el caos con la brújula de la Filosofía y la Resiliencia.
+@JackTamarindoX: Desmonta las narrativas con el lente del Cine y el ritmo de la Electrónica (Crítica Agridulce).
 
-Jack Tamarindo: Desmonta las narrativas con el lente del Cine y el ritmo de la Electrónica (Crítica Agridulce).
+Estructura del Sitio Web (GitHub Pages)
 
-Estructura del Repositorio (Página Dual)
-
-El sitio web está dividido en dos secciones navegables mediante la barra superior:
+El sitio web está dividido en dos secciones navegables. Haz clic en los enlaces para Abrir cada página:
 
 Archivo
 
@@ -20,11 +18,15 @@ Contenido
 
 Función
 
+Abrir
+
 index.html
 
 Inicio (Manifiesto): Manifiesto completo, videos inspiracionales incrustados y citas APA.
 
-Página principal estática (GitHub Pages).
+Página principal estática.
+
+[Abrir Manifiesto]
 
 comentarios.html
 
@@ -32,11 +34,31 @@ Enviar Comentarios: Formulario para enviar mensajes a jack_benito@proton.me con 
 
 Formulario de interacción y contacto.
 
-README.md
+[Abrir Formulario]
 
-Documentación del proyecto.
+Nota: Reemplaza [Abrir Manifiesto] y [Abrir Formulario] con los enlaces reales de GitHub Pages una vez desplegado.
 
-Información general y licencia.
+Documentación y Gobernanza
+
+Para contribuir o entender las reglas del proyecto, revisa la siguiente documentación. Haz clic en el nombre del archivo para Abrirlo.
+
+Archivo
+
+Contenido
+
+Propósito
+
+LICENSE.txt
+
+Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0).
+
+Texto legal completo de la licencia.
+
+CODE_OF_CONDUCT.md
+
+Código de Conducta.
+
+Reglas para la interacción y el diálogo respetuoso en la comunidad (aplicable a los comentarios).
 
 Videos Inspiracionales (Citas APA 7ma Edición)
 
