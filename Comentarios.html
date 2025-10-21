@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Comentarios</title>
+    <!-- Carga de Tailwind CSS para el diseño responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Fuentes personalizadas */
+        .font-serif-title { font-family: 'Merriweather', serif; }
+        .font-sans-body { font-family: 'Roboto', sans-serif; }
+        
+        /* Paletas de Color CSS Variables (Usando colores base del manifiesto) */
+        :root {
+            --benito-primary: #003366; 
+            --jack-accent: #FF4500; 
+        }
+
+        /* Estilos Base */
+        body { 
+            background-color: #f7f7f7; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            color: #1f2937;
+        }
+
+        /* Licencia CC */
+        .license-footer {
+            font-size: 0.75rem;
+            color: #6b7280;
+            padding-top: 1rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="font-sans-body">
+
+    <!-- Navbar/Menú de Navegación -->
+    <nav class="bg-gray-900 shadow-lg sticky top-0 z-10">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="font-serif-title text-xl font-bold text-white">
+                📂🌈X Manifiesto Dual
+            </span>
+            <div class="space-x-4">
+                <a href="index.html" class="text-white font-medium hover:border-b-2 hover:border-yellow-400 pb-1 transition duration-150">Inicio (Manifiesto)</a>
+                <a href="comentarios.html" class="text-white font-medium border-b-2 border-yellow-400 pb-1">Enviar Comentarios</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor Principal Centrado -->
+    <div class="max-w-4xl mx-auto p-4 md:p-8 bg-white shadow-xl rounded-lg my-8 flex-grow">
+        
+        <header class="text-center mb-10">
+            <h1 class="font-serif-title text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight" style="color: var(--benito-primary);">
+                📩 Dejar tu Huella en el Archivo Vivo
+            </h1>
+            <p class="mt-2 text-lg text-gray-500">
+                Tu comentario será revisado por @BenitoNautaX y @JackTamarindoX.
+            </p>
+        </header>
+
+        <!-- Formulario de Comentarios -->
+        <section id="comment-form-section" class="mt-8 p-6 bg-gray-50 rounded-xl shadow-md border-t border-gray-200">
+            <form id="commentForm">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Tu Nombre/Alias</label>
+                    <input type="text" id="name" name="name" required
+                           class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border focus:border-indigo-500 focus:ring-indigo-500">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="comment" class="block text-sm font-medium text-gray-700">Comentarios (Máx. 500 palabras)</label>
+                    <textarea id="comment" name="comment" rows="8" maxlength="3000" required
+                              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border focus:border-indigo-500 focus:ring-indigo-500 resize-none"></textarea>
+                    <p class="text-xs text-gray-500 mt-1">
+                        El sistema controla la longitud (aprox. 500 palabras) y modera el lenguaje inapropiado antes del envío.
+                    </p>
+                </div>
+                
+                <!-- Aviso de Privacidad Resaltado -->
+                <div class="p-4 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 mb-6 text-sm rounded-lg">
+                    <p class="font-bold">Aviso de Privacidad (GDPR/LOPD):</p>
+                    <p>No se recolectan datos personales ni información del usuario. Tu comentario (nombre y texto) será enviado directamente a la casilla **`jack_benito@proton.me`** para moderación. **No cedemos tus datos a terceros.**</p>
+                </div>
+
+                <button type="submit" 
+                        class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white 
+                                bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 
+                                transition duration-150 ease-in-out">
+                    Enviar Comentario a jack_benito@proton.me
+                </button>
+            </form>
+            
+            <div id="moderation-message" class="mt-4 p-3 hidden rounded-md text-center text-sm" style="background-color: #e6f7ff; color: var(--benito-primary);">
+                <!-- Mensaje dinámico de confirmación/error -->
+            </div>
+        </section>
+
+        <!-- Pie de Página y Licencia CC -->
+        <footer class="mt-10 pt-6 text-center border-t border-gray-300">
+            <p class="license-footer">
+                Este Manifiesto y sus archivos adjuntos están licenciados bajo 
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" class="text-blue-600 hover:text-blue-800">
+                    Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)
+                </a>.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('commentForm');
+        const moderationMessage = document.getElementById('moderation-message');
+        const commentInput = document.getElementById('comment');
+        const maxChars = 3000; // Máximo para asegurar 500 palabras.
+
+        // Función para simular el control de lenguaje inapropiado (client-side)
+        // Nota: La moderación real debe ocurrir en el backend/recepción del email,
+        // pero se incluye esta capa para la usabilidad.
+        function checkInappropriateLanguage(text) {
+            // Ejemplo de palabras que se bloquearían:
+            const inappropriateWords = ["tonto", "idiota", "cancelar", "grito", "agredir"]; 
+            const regex = new RegExp(inappropriateWords.join("|"), "gi");
+            return regex.test(text);
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const commentText = commentInput.value.trim();
+            const emailTarget = 'jack_benito@proton.me';
+            const subject = encodeURIComponent(`Nuevo Comentario Manifiesto Dual de ${name}`);
+            
+            // 1. Control de Longitud (Caracteres)
+            if (commentText.length > maxChars) {
+                moderationMessage.className = 'mt-4 p-3 rounded-md text-center text-sm';
+                moderationMessage.style.backgroundColor = '#fce9e9';
+                moderationMessage.style.color = 'var(--jack-accent)';
+                moderationMessage.innerText = `Error: El comentario excede el límite de ${maxChars} caracteres (aprox. 500 palabras).`;
+                moderationMessage.classList.remove('hidden');
+                return;
+            }
+
+            // 2. Control de Lenguaje Inapropiado
+            if (checkInappropriateLanguage(commentText)) {
+                moderationMessage.className = 'mt-4 p-3 rounded-md text-center text-sm';
+                moderationMessage.style.backgroundColor = '#fce9e9';
+                moderationMessage.style.color = 'var(--jack-accent)';
+                moderationMessage.innerText = 'Error: Tu comentario contiene lenguaje inapropiado o agresivo. Por favor, modéralo para que sea un diálogo ameno.';
+                moderationMessage.classList.remove('hidden');
+                return;
+            }
+
+            // 3. Generación del Enlace Mailto
+            const body = encodeURIComponent(
+                `Nombre: ${name}\n\n` +
+                `Comentario (Max 500 palabras):\n\n${commentText}\n\n` +
+                `--- Aviso: Este mensaje fue generado desde el formulario de comentarios del Manifiesto Dual X. ---`
+            );
+            
+            const mailtoLink = `mailto:${emailTarget}?subject=${subject}&body=${body}`;
+
+            // Abrir el cliente de correo
+            window.location.href = mailtoLink;
+
+            // Mostrar mensaje de confirmación
+            moderationMessage.className = 'mt-4 p-3 rounded-md text-center text-sm';
+            moderationMessage.style.backgroundColor = '#d1e7dd';
+            moderationMessage.style.color = '#0f5132';
+            moderationMessage.innerText = '¡Listo! Tu cliente de correo se ha abierto con el mensaje preescrito. Por favor, pulsa "Enviar" en tu aplicación de correo.';
+            moderationMessage.classList.remove('hidden');
+
+            // Resetear el formulario (opcional)
+            // form.reset();
+        });
+    </script>
+</body>
+</html>
