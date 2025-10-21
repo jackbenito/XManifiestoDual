@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Manifiesto Dual X</title>
+    <!-- Carga de Tailwind CSS para el diseño responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Fuentes personalizadas */
+        .font-serif-title { font-family: 'Merriweather', serif; }
+        .font-sans-body { font-family: 'Roboto', sans-serif; }
+        
+        /* Paletas de Color CSS Variables */
+        :root {
+            /* BENITO NAUTA (Intelecto, Resiliencia, Esperanza) */
+            --benito-primary: #003366; /* Azul Profundo */
+            --benito-accent: #FFC300; /* Amarillo Cálido (Luz) */
+            
+            /* JACK TAMARINDO (Crítica, Agridulce, Electrónica) */
+            --jack-primary: #8A2BE2; /* Azul Violeta (Crítico/Misterioso) */
+            --jack-accent: #FF4500; /* Naranja-Rojo (Agridulce/Warning) */
+        }
+
+        /* Estilos Base */
+        body { 
+            background-color: #f7f7f7; 
+            min-height: 10vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            color: #1f2937; /* Gris Oscuro */
+        }
+
+        /* Estilos de Contenedores de Videos */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin-top: 1.5rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Estilo para la Cita APA Resaltada */
+        .cita-apa {
+            border-left-width: 4px;
+            padding-left: 1rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+        
+        /* Licencia CC */
+        .license-footer {
+            font-size: 0.75rem;
+            color: #6b7280;
+            padding-top: 1rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body class="font-sans-body">
+
+    <!-- Navbar/Menú de Navegación -->
+    <nav class="bg-gray-900 shadow-lg sticky top-0 z-10">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="font-serif-title text-xl font-bold text-white">
+                📂🌈X Manifiesto Dual
+            </span>
+            <div class="space-x-4">
+                <a href="index.html" class="text-white font-medium border-b-2 border-yellow-400 pb-1">Inicio (Manifiesto)</a>
+                <a href="comentarios.html" class="text-white font-medium hover:border-b-2 hover:border-yellow-400 pb-1 transition duration-150">Enviar Comentarios</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor Principal Centrado -->
+    <div class="max-w-4xl mx-auto p-4 md:p-8 bg-white shadow-xl rounded-lg my-8 flex-grow">
+        
+        <header class="text-center mb-10">
+            <h1 class="font-serif-title text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                Manifiesto Dual X: El Quinto Cambio
+            </h1>
+            <p class="mt-2 text-xl text-gray-500">
+                Fin, Misión, Visión, Valores y Objetivos de @BenitoNautaX & @JackTamarindoX
+            </p>
+        </header>
+
+        <!-- Contenedor Dual del Manifiesto -->
+        <div class="flex flex-col lg:flex-row gap-8">
+            
+            <!-- Bloque de BENITO NAUTA X (CORREGIDO) -->
+            <section id="benito" class="flex-1 p-6 rounded-xl shadow-lg border-t-8" 
+                     style="border-color: var(--benito-primary); background-color: #F8FFFF;">
+                <h2 class="font-serif-title text-2xl font-bold mb-4" style="color: var(--benito-primary);">
+                    🧭 @BenitoNautaX: El Navegante del Caos
+                </h2>
+                <p class="text-sm font-semibold mb-3" style="color: var(--benito-accent);">
+                    Brújula: Filosofía. Nave: Resiliencia.
+                </p>
+                <div class="space-y-4 text-sm">
+                    <p><strong>FIN:</strong> Mapear la intersección entre la ética humana y el algoritmo. Ser la voz serena que traduce el caos socioeconómico de la Generación X en datos duros y esperanza.</p>
+                    <p><strong>MISIÓN:</strong> Usar la lógica de las ciencias y la Resiliencia para analizar ciclos de crisis. Exponer la Pobreza como un algoritmo fallido que requiere corrección moral.</p>
+                    <p><strong>VISIÓN:</strong> Ser la fuente de referencia para la comprensión del "Quinto Cambio", donde la IA es la nueva frontera y la humanidad debe reafirmar su valor.</p>
+                    <p><strong>VALORES:</strong> Racionalidad, Resiliencia, Bondad (Benito Bodoque), Escepticismo (X), Ética.</p>
+                    <p><strong>OBJETIVOS:</strong> Analizar tendencias económicas y políticas, aplicar marcos filosóficos (la brújula), y fomentar la **acción** basada en el dato y la humanidad.</p>
+                </div>
+                
+                <!-- Video Inspiracional de Benito (313 - CORREGIDO) -->
+                <h3 class="font-bold mt-6 mb-2 text-base" style="color: var(--benito-primary);">Video Inspiracional: 313</h3>
+                <div class="video-container">
+                    <!-- YouTube embed para Residente, Silvia Pérez Cruz, Penélope Cruz - 313 -->
+                    <iframe src="https://www.youtube.com/embed/KymTp7rnTiE" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen title="Video Musical: Residente, Silvia Pérez Cruz, Penélope Cruz - 313">
+                    </iframe>
+                </div>
+
+                <!-- Cita APA de Benito (CORREGIDA) -->
+                <div class="cita-apa mt-4 rounded-md p-3" style="border-color: var(--benito-accent); background-color: #e6f7ff; color: var(--benito-primary);">
+                    <p class="font-bold">Cita APA (7ma Edición):</p>
+                    <p class="italic">Residente. [Residente]. (2024, 21 de marzo). Residente, Silvia Pérez Cruz, Penélope Cruz - 313 (Official Video) [Video]. YouTube.</p>
+                </div>
+
+                <a href="comentarios.html" class="mt-6 inline-block text-sm font-semibold rounded-md py-2 px-4 shadow-md transition duration-150 ease-in-out" 
+                   style="background-color: var(--benito-primary); color: white; hover-bg: #004d99;">
+                    Enviar Comentario
+                </a>
+            </section>
+
+            <!-- Bloque de JACK TAMARINDO X (SIN CAMBIOS) -->
+            <section id="jack" class="flex-1 p-6 rounded-xl shadow-lg border-t-8" 
+                     style="border-color: var(--jack-primary); background-color: #FFF0F5;">
+                <h2 class="font-serif-title text-2xl font-bold mb-4" style="color: var(--jack-primary);">
+                    🌶️ @JackTamarindoX: El Crítico Agridulce
+                </h2>
+                <p class="text-sm font-semibold mb-3" style="color: var(--jack-accent);">
+                    Lente: Cine. Soundtrack: Electrónica. Sabor: Agridulce.
+                </p>
+                <div class="space-y-4 text-sm">
+                    <p><strong>FIN:</strong> Desmantelar las narrativas superficiales. Ser el pez limpiador que insiste en señalar la suciedad, buscando los "Pixel de verdad en el Frame de la historia".</p>
+                    <p><strong>MISIÓN:</strong> Aplicar el pensamiento crítico a la política y la cultura, usando la metáfora de la pulpa de tamarindo: escéptico (izquierda), crítico (derecha), analítico (centro).</p>
+                    <p><strong>VISIÓN:</strong> Ser el faro para la Generación X que desconfía de los colores y sabores artificiales, promoviendo el "Folklore en binario" como resistencia cultural.</p>
+                    <p><strong>VALORES:</strong> Escepticismo, Veracidad, Análisis Narrativo, Pasión por la Música/Arte (Electrónica/Cine), Autenticidad.</p>
+                    <p><strong>OBJETIVOS:</strong> Desmontar noticias y *memes*, identificar falacias, y ofrecer una perspectiva que honre la complejidad de la realidad social y política.</p>
+                </div>
+                
+                <!-- Video Inspiracional de Jack -->
+                <h3 class="font-bold mt-6 mb-2 text-base" style="color: var(--jack-primary);">Video Inspiracional: Bajo los Escombros</h3>
+                <div class="video-container">
+                    <!-- YouTube embed para Residente - Bajo los Escombros -->
+                    <iframe src="https://www.youtube.com/embed/Le5AGYxPCLI" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen title="Video Musical: Residente - Bajo los Escombros">
+                    </iframe>
+                </div>
+
+                <!-- Cita APA de Jack -->
+                <div class="cita-apa mt-4 rounded-md p-3" style="border-color: var(--jack-accent); background-color: #fce9e9; color: var(--jack-primary);">
+                    <p class="font-bold">Cita APA (7ma Edición):</p>
+                    <p class="italic">Residente. [ResidenteVEVO]. (2024, 23 de febrero). Residente, Amal Murkus - Bajo los Escombros (Visualizer) [Video]. YouTube.</p>
+                </div>
+
+                <a href="comentarios.html" class="mt-6 inline-block text-sm font-semibold rounded-md py-2 px-4 shadow-md transition duration-150 ease-in-out" 
+                   style="background-color: var(--jack-primary); color: white; hover-bg: #9b59b6;">
+                    Enviar Comentario
+                </a>
+            </section>
+        </div>
+
+        <!-- Pie de Página y Licencia CC -->
+        <footer class="mt-10 pt-6 text-center border-t border-gray-300">
+            <p class="license-footer">
+                Este Manifiesto y sus archivos adjuntos están licenciados bajo 
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" class="text-blue-600 hover:text-blue-800">
+                    Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)
+                </a>.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
